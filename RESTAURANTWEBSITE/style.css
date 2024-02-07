@@ -1,0 +1,495 @@
+/* base css start */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,400;1,600;1,700&display=swap');
+
+* {
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+}
+
+:root {
+    --main-color: #f7ecd2;
+    --second-color: #46350d;
+    --border: #0d0a02;
+}
+
+i {
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+}
+
+section {
+    padding: 30px 8%;
+}
+
+img {
+    width: 250px;
+    height: 300px;
+    cursor: pointer;
+    border: var(--border);
+    border-radius: 7px;
+
+}
+
+
+
+body {
+    background: var(--main-color);
+    min-height: 100vh;
+}
+
+#tittle h3,
+span {
+    font-size: 2.8rem;
+}
+
+#tittle span {
+    color: var(--second-color);
+
+}
+
+#tittle {
+    padding: 30px 8%;
+}
+
+#tittle {
+    border-bottom: 3px solid #0d0a02;
+}
+
+/* base css end */
+
+/* header section start */
+
+#logo {
+    width: 100px;
+    height: auto;
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav .links a {
+    margin-right: 1rem;
+    color: var(--second-color);
+    font-size: 22px;
+}
+
+.nav .links a:hover {
+    border-bottom: 3px solid black;
+}
+
+.nav .links .active {
+    border-bottom: 3px solid black;
+}
+
+.nav .icons i {
+    margin-right: 10px;
+}
+
+/* header section end */
+
+/* main section start */
+.container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/customers.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    border: var(--border);
+}
+
+.container .restaurantname h3 {
+    font-size: 2.9rem;
+    color: #634b12;
+}
+
+/* main section end */
+/* products section start */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: 2fr;
+    grid-column-gap: 33px;
+    grid-row-gap: 7px;
+    margin-top: 30px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.menubox .eating h3 {
+    font-size: 2.3rem;
+    margin-top: 15px;
+}
+
+.menubox .Drink h3 {
+    font-size: 2.3rem;
+    margin-top: 15px;
+}
+
+.tittle {
+    border-bottom: 3px solid #0d0a02;
+}
+
+.tittle h3,
+span {
+    font-size: 2.8rem;
+}
+
+.tittle span {
+    color: var(--second-color);
+
+}
+
+/* products section end */
+
+/* reservation section start */
+.reservation {
+    background: url(images/reservationimg.jpg);
+    border-image: fill 0 linear-gradient(#0001, #000);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.reservation .inputbox h3 {
+    font-size: 1.9rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.reservation .inputbox p {
+    margin-bottom: 15px;
+    color: white;
+
+}
+
+.reservation .inputbox .textinput input {
+    width: 350px;
+    padding: 10px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.reservation .inputbox .dateinput input {
+    width: 350px;
+    padding: 10px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.reservation .inputbox .btn button {
+    padding: 7px;
+    cursor: pointer;
+
+}
+
+.reservation .inputbox .btn button:hover {
+    color: var(--main-color);
+    background: var(--second-color);
+}
+
+/* reservation section end */
+/* gallery section start */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+
+}
+
+.card figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    color: #000;
+    font-size: 29px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover figcaption {
+    opacity: 1;
+    transform: translateX(-20px);
+
+}
+
+.card {
+    position: relative;
+    left: 0px;
+    width: 80px;
+    border-radius: 16px;
+    height: 360px;
+    overflow: hidden;
+    background-color: var(--second-color);
+    transition: 0.4s ease-in-out;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0, 5);
+    flex: 0.25;
+}
+
+.card img {
+    height: 360px;
+
+
+}
+
+.card:hover {
+    flex: 1;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* gallery section end */
+
+
+/* corporate section start */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.column .infotext {
+    text-align: center;
+}
+
+.column .infotext h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.column .infotext small {
+    text-align: center;
+}
+
+.column .customers,
+.location,
+.personel,
+.moredrink {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.column .customers,
+.location,
+.personel,
+.moredrink h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#customers,
+#location,
+#personel,
+#moredrink {
+    width: 350px;
+    height: 500px;
+}
+
+/* corporate section end */
+
+.footer {
+    background: var(--second-color);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper .links a {
+    margin-right: 1rem;
+    color: var(--main-color);
+    font-size: 22px;
+}
+
+.wrapper .links a:hover {
+    border-bottom: 3px solid black;
+}
+
+.wrapper .links .active {
+    border-bottom: 3px solid black;
+}
+
+.wrapper .icons i {
+    margin-right: 10px;
+}
+
+/* footer section start */
+
+/* media query start */
+@media screen and (max-width:1200px) {
+    .menubox .parent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    img {
+        width: 500px;
+        height: 400px;
+        cursor: pointer;
+        border: var(--border);
+        border-radius: 7px;
+        margin-top: 30px;
+
+    }
+}
+
+@media screen and (max-width:992px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav .links .a {
+        margin-right: 5px;
+        color: var(--second-color);
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #logo {
+        display: none;
+    }
+
+    .nav {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav .links a,
+    .nav .icons i {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 20px 2%;
+    }
+
+    .nav .links {
+        text-align: center;
+    }
+
+    .nav .links a {
+        margin-right: 5px;
+    }
+
+    .nav .icons i {
+        margin-right: 5px;
+    }
+
+    .container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/customers.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 150px;
+        border: var(--border);
+    }
+
+    .container .restaurantname h3 {
+        font-size: 1.6rem;
+        color: #634b12;
+        text-align: center;
+    }
+
+    .menubox .parent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    img {
+        width: 300px;
+        height: 250px;
+        cursor: pointer;
+        border: var(--border);
+        border-radius: 7px;
+        margin-top: 30px;
+
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .wrapper .links a {
+        margin-right: 5px;
+        color: var(--main-color);
+        font-size: 17px;
+    }
+
+    .wrapper .icons i {
+        margin-right: 5px;
+    }
+
+    .location .row iframe {
+        width: 450px;
+    }
+
+    .corporate .column .infotext i {
+        font-size: 17px;
+    }
+
+    .corporate .column .infotext h2 {
+        font-size: 28px;
+    }
+
+    .card img {
+        height: 300px;
+
+
+    }
+}
